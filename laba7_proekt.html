@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB7</title>
+</head>
+<body>
+    <script>
+        function Person(pName, pAge) {
+            this.pName = pName;
+            this.pAge = pAge;
+            this.display = function() {
+                document.write(`${this.pName}, ${this.pAge}<br>`);
+            }
+            this.display();
+        }
+        function Car(cBrand, cYear) {
+            this.cBrand = cBrand;
+            this.cYear = cYear;
+            this.display = function() {
+                document.write(`${this.cBrand}, ${this.cYear}<br>`);
+            }
+            this.display();
+        }
+        function Book(bName, bYear) {
+            this.bName = bName;
+            this.bYear = bYear;
+            this.display = function() {
+                document.write(`${this.bName}, ${this.bYear}<br>`);
+            }
+            this.display();
+        }
+
+        function createObjects() {
+            const persons = [
+                new Person("sasha", 19),
+                new Person("tom", 27),
+                new Person("harry", 21)
+            ];
+            const cars = [
+                new Car("bmw", 2018),
+                new Car("toyota", 2015),
+                new Car("lada", 2014)
+            ];
+            const books = [
+                new Book("book1", 1979),
+                new Book("book2", 2005),
+                new Book("book3", 1996)
+            ];
+
+            return[persons, cars, books];
+        }
+        const [persons, cars, books] = createObjects();
+    </script>
+</body>
+</html>
